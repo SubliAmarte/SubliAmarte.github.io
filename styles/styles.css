@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
   margin: 0;
   max-width: 100%;
@@ -12,43 +13,110 @@ body.dark-mode {
   color: #ffffff;
 }
 
+/* Estilos para el header */
+header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  max-width: 100%;
+  padding: 5px 15px;
+  background-color: #5ce1e6;
+}
+
+header img {
+  width: 100px;
+  border-radius: 5px;
+  border: 1px #353535be solid;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+  transition: 0.5s;
+}
+
+header img:hover {
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5)) brightness(1.1);
+  transition: 0.5s;
+}
+
+/* Estilos para el contenido principal */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para el botón de modo oscuro */
+#miBoton {
+  font-size: 30px;
+  background: none;
+  transition: 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+#miBoton:hover {
+  color: #fff;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5)) brightness(1.1);
+  transition: 0.2s;
+}
+
+/* Estilos para la animación marquee */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #00949b;
+  padding: 0;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.marquee p {
+  display: inline-block;
+  color: purple;
+  margin: 4px;
+  white-space: nowrap;
+  font-size: 19px;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Estilos para la navegación */
 #navegacion {
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  gap: 3%;
   padding: 5px;
   background-color: #225052;
 }
 
-#navegacion button {
+#navegacion a {
   color: #fff;
   padding: 5px;
   border-radius: 10px;
   font-size: 20px;
   text-align: center;
   text-decoration: none;
+  transition: 0.5s;
   background: none;
   border: none;
 }
 
-#navegacion button:hover {
-  background-color: #00949b;
+#navegacion a:hover {
+  background-color: #59bdb8;
+  transition: 0.5s;
 }
 
-#redesSociales {
-  display: flex;
-  line-height: 0.5;
-  gap: 10px;
-  padding: 2px 10px 2px 0px;
-  flex-wrap: wrap;
-  background-color: #225052;
-  justify-content: space-between;
-}
+/* Estilos para los enlaces de redes sociales */
 
 #redesSociales a {
   color: #fff;
   min-width: 100px;
 }
-
 
 #redesSociales ul {
   display: flex;
@@ -63,6 +131,7 @@ body.dark-mode {
   gap: 10px;
 }
 
+/* Estilos específicos para cada red social */
 .socialwhatsapp {
   background-color: #25d366;
   color: #fff;
@@ -119,6 +188,7 @@ body.dark-mode {
   text-decoration: none;
 }
 
+/* Estilos para dispositivos móviles */
 @media (max-width: 600px) {
   .socialwhatsapp,
   .socialfacebook,
@@ -144,64 +214,5 @@ body.dark-mode {
 
   .socialtiktok {
     bottom: 20px;
-  }
-}
-
-
-
-
-
-
-
-
-
-header {
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #5ce1e6;
-}
-
-header img {
-  width: 250px;
-}
-
-main {
-  padding: 20px;
-  text-align: center;
-}
-
-#miBoton {
-  font-size: 35px;
-  background: none;
-  cursor: pointer;
-  border: none;
-}
-
-.marquee {
-  width: 100%;
-  overflow: hidden;
-  background: #00949b;
-  padding: 0;
-  color: #fff;
-  box-sizing: border-box;
-}
-
-.marquee p {
-  display: inline-block;
-  margin: 5px;
-  white-space: nowrap;
-  animation: marquee 15s linear infinite;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
   }
 }
