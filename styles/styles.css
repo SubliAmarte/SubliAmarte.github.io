@@ -10,7 +10,7 @@ body {
 
 body.dark-mode {
   background-color: #1a1a1aed;
-  color: #ffffff;
+  color: #fff;
 }
 
 /* Estilos para el header */
@@ -40,6 +40,25 @@ header img:hover {
 main {
   padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+main section {
+  width: 85%;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+}
+
+@media (max-width: 700px) {
+  main section {
+    flex-direction: column;
+    align-items: center;
+    max-width: 95%;
+    width: 95%;
+  }
 }
 
 /* Estilos para el botón de modo oscuro */
@@ -112,7 +131,6 @@ main {
 }
 
 /* Estilos para los enlaces de redes sociales */
-
 #redesSociales a {
   color: #fff;
   min-width: 100px;
@@ -194,14 +212,14 @@ main {
   .socialfacebook,
   .socialinstagram,
   .socialtiktok {
-    right: 10px;
+    right: 0;
     padding: 8px;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 15px 0 0 15px;
   }
 
   .socialwhatsapp {
-    bottom: 140px;
+    bottom: 145px;
   }
 
   .socialfacebook {
@@ -209,10 +227,50 @@ main {
   }
 
   .socialinstagram {
-    bottom: 60px;
+    bottom: 55px;
   }
 
   .socialtiktok {
-    bottom: 20px;
+    bottom: 10px;
+  }
+}
+
+/* Estilos para ambos divs */
+.contenido-adicional-1,
+.contenido-adicional-2 {
+  width: 30%;
+  padding: 30px;
+  background-color: #d1b6b683;
+}
+
+.contenido-principal img {
+  width: 40%;
+  background-color: aliceblue;
+}
+
+/* Estilos específicos para cada div */
+.contenido-adicional-1 {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.contenido-adicional-2 {
+  border-radius: 0 10px 10px 0;
+}
+
+@media (max-width: 700px) {
+  .contenido-adicional-1,
+  .contenido-adicional-2,
+  .contenido-principal img {
+    width: -webkit-fill-available;
+  }
+
+  .contenido-adicional-1 {
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+  }
+
+  .contenido-adicional-2 {
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
   }
 }
