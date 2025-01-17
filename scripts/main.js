@@ -30,3 +30,5 @@ document.getElementById('miBoton').addEventListener('click', function() {
         localStorage.setItem('modoOscuro', 'false');
     }
 });
+
+
