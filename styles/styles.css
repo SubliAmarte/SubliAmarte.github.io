@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #cfe9ff;
+  color: #000;
+  min-height: 500px;
+}
+
+body.dark-mode {
+  background-color: #1a1a1aed;
+  color: #ffffff;
+}
+
+#navegacion {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  background-color: #225052;
+}
+
+#navegacion button {
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+
+#navegacion button:hover {
+  background-color: #00949b;
+}
+
+#redesSociales {
+  display: flex;
+  line-height: 0.5;
+  gap: 10px;
+  padding: 2px 10px 2px 0px;
+  flex-wrap: wrap;
+  background-color: #225052;
+  justify-content: space-between;
+}
+
+#redesSociales a {
+  color: #fff;
+  min-width: 100px;
+}
+
+
+#redesSociales ul {
+  display: flex;
+  gap: 10px;
+  padding: 0px;
+  margin: 0;
+  list-style: none;
+}
+
+#redesSociales li {
+  display: flex;
+  gap: 10px;
+}
+
+.socialwhatsapp {
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 170px;
+  right: 20px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.socialfacebook {
+  background-color: #3b5998;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.socialinstagram {
+  background-color: #e4405f;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.socialtiktok {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .socialwhatsapp,
+  .socialfacebook,
+  .socialinstagram,
+  .socialtiktok {
+    right: 10px;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
+  .socialwhatsapp {
+    bottom: 140px;
+  }
+
+  .socialfacebook {
+    bottom: 100px;
+  }
+
+  .socialinstagram {
+    bottom: 60px;
+  }
+
+  .socialtiktok {
+    bottom: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #5ce1e6;
+}
+
+header img {
+  width: 250px;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+#miBoton {
+  font-size: 35px;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #00949b;
+  padding: 0;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.marquee p {
+  display: inline-block;
+  margin: 5px;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
